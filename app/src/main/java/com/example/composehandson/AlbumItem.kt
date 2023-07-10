@@ -54,7 +54,6 @@ fun AlbumItem(album: Album, modifier: Modifier = Modifier) {
     Surface(
         modifier = modifier
             .fillMaxWidth()
-            .animateContentSize()
             .padding(horizontal = 16.dp, vertical = 8.dp),
         shape = RoundedCornerShape(12.dp),
         shadowElevation = shadowElevation,
@@ -95,6 +94,7 @@ fun AlbumItem(album: Album, modifier: Modifier = Modifier) {
                     style = MaterialTheme.typography.bodyMedium,
                     maxLines = if (isExpanded) Int.MAX_VALUE else 1,
                     overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.animateContentSize(),
                 )
             }
         }
